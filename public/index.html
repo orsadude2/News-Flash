@@ -10,6 +10,22 @@
     <link rel="stylesheet" href="styles/layout.css">
     <title>News Flash</title>
 
+    <script id="article-template" type="text/x-handlebars-template">
+        <div class="article-wrapper">
+            <div class="article-image">
+                <img src="{{ image_url }}">
+            </div>
+            <div class="article-author clearfix">
+                <div class="article-title-wrapper clearfix">
+                    <h2 class="article-author">{{ title }}</h2>
+                    <div class="article-author">{{ author }}</div>
+                    <div>{{ description }}</div>
+                </div>
+                <!-- <div class="description"><button type="button" id="view-details" data-id="{{ id }}">view details</button></div>    -->
+            </div>
+        </div>
+    </script>
+
 </head>
 
 <body>
