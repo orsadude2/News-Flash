@@ -1,4 +1,7 @@
-
+// 1) fetchAll (anon vs user)
+// 2) login
+// 3) sign-up
+// 4) sources
 
 // var app = app || {};
 
