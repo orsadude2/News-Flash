@@ -1,0 +1,26 @@
+{
+  "name": "news-flash",
+  "version": "1.0.0",
+  "description": "Code Fellows 301n9 - Final Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OviParasca/News-Flash.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OviParasca/News-Flash/issues"
+  },
+  "homepage": "https://github.com/OviParasca/News-Flash#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "pg": "^7.4.1"
+  }
+}
