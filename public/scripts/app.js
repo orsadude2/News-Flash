@@ -14,7 +14,7 @@ var loadData = function (url, id, anchor) {
     $(anchor).append(articles);
   });
 };
-loadData('data.json', '#feedView-template', '#anchor');
+// loadData('data.json', '#feedView-template', '#anchor');
 
 module.articlePage = articlePage;
 
