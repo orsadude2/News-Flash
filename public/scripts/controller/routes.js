@@ -1,13 +1,17 @@
+'use strict';
+
+
 page('/*', (ctx, next) => {
     $('.page').hide();
     next();
   });
 
-  page('/', () => {
-    app.Book.fetchAll().then(books => {
-      app.bookListPage.init(books);
-    })
-  })
+  page('/', app.newsListPage.init);
+  // page('/', () => {
+  //   app.Book.fetchAll().then(books => {
+  //     app.bookListPage.init(books);
+  //   })
+  // })
   
 //   page('/books/:id', (ctx) => {
 //     $('.page').hide()
@@ -25,13 +29,14 @@ page('/*', (ctx, next) => {
     app.adminView.init();
   });
 
-  page('/sources', () => {
-    app.adminView.init();
-  });
+  // page('/sources', () => {
+  //   app.View.init();
+  // });
 
   page('/error', () => {
     $('.page').hide();
     $('#error-page').show();
   });
   
+
   page.start();

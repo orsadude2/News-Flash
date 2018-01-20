@@ -1,0 +1,48 @@
+.feed-wrapper {
+    border-radius: 5px;
+    background-color: grey;
+    margin-bottom: 42px;
+}
+
+.feed-wrapper .feed-image {
+    text-align: center;
+}
+
+.feed-wrapper img {
+    margin: 0 auto;
+}
+
+.feed-wrapper .article-author {
+    padding: 10px;
+    background-color: #4a4a4a;
+    color: #939393;
+}
+
+
+/* Navigation bar */
+
+#article-nav {
+    background-color: #484848;
+    padding: 10px;
+}
+
+#navbar-toggle {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    float: right;
+    margin-top: 25px;
+}
+
+#navbar-toggle:focus {
+    outline: none;
+}
+
+#navbar-toggle div {
+    width: 35px;
+    height: 5px;
+    background-color: #bfbfbf;
+    margin: 6px 0;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
