@@ -1,29 +1,36 @@
-.feed-wrapper {
-    border-radius: 5px;
-    background-color: grey;
-    margin-bottom: 42px;
+h1 {
+    padding-left: 1em;
+    float: left;
+    margin: 0;
 }
 
+.feed-wrapper {
+    /* border-radius: .5em; */
+    background-color: #808080;
+    margin-bottom: .5em;
+}
 .feed-wrapper .feed-image {
     text-align: center;
 }
-
 .feed-wrapper img {
     margin: 0 auto;
+    width: 100%;
 }
-
 .feed-wrapper .article-author {
-    padding: 10px;
+    padding: 1em;
     background-color: #4a4a4a;
     color: #939393;
 }
-
+label {
+    display: -webkit-box;
+    padding-left: 1em;
+    margin: 0;
+}
 
 /* Navigation bar */
-
 #article-nav {
     background-color: #484848;
-    padding: 10px;
+    padding: 1em;
 }
 
 #navbar-toggle {
@@ -31,7 +38,7 @@
     border: 0;
     cursor: pointer;
     float: right;
-    margin-top: 25px;
+    margin-top: 0.8em;
 }
 
 #navbar-toggle:focus {
@@ -39,10 +46,64 @@
 }
 
 #navbar-toggle div {
-    width: 35px;
-    height: 5px;
+    width: 3.5em;
+    height: .5em;
     background-color: #bfbfbf;
-    margin: 6px 0;
+    margin: .6em 0;
     border: 1px solid transparent;
-    border-radius: 2px;
+    border-radius: .02em;
 }
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.login-modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: -20px;
+    margin-right: -10px;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input {
+   width: 60%;
+   height: 30px;
+   margin-bottom: 10px;
+}
+
+#loginBtn {
+	height: 30px;
+    width: 25%;
+}
+
