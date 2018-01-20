@@ -1,0 +1,8 @@
+.feed-wrapper {
+    float: right;
+}
+
+#app-title, .logo {
+    float: left;
+}
+
