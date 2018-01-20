@@ -4,6 +4,7 @@
 
 const express = require('express');
 const pg = require('pg');
+const fs = require('fs');
 const bodyParser = require('body-parser');
 const superagent = require('superagent');
 

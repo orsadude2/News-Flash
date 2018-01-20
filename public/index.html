@@ -6,32 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/module.css">
+    <link rel="stylesheet" href="styles/modules.css">
     <link rel="stylesheet" href="styles/layout.css">
     <title>News Flash</title>
-
-    <!-- <script id="article-template" type="text/x-handlebars-template">
-        <div class="article-wrapper">
-            <div class="article-image">
-                <img src="{{ image_url }}">
-            </div>
-            <div class="article-author clearfix">
-                <div class="article-title-wrapper clearfix">
-                    <h2 class="article-author">{{ title }}</h2>
-                    <div class="article-author">{{ author }}</div>
-                    <div>{{ description }}</div>
-                </div>
-                <!-- <div class="description"><button type="button" id="view-details" data-id="{{ id }}">view details</button></div>    -->
-            <!-- </div>
-        </div>
-    </script> -->
-
 </head>
 
 <body>
-    <!-- <div id="book-nav" class="clearfix">
+    <div id="article-nav" class="clearfix">
         <a class="logo" href="/">
-            <img src="img/logo-codefellows.png">
+            <!-- TODO: replace with our own image -->
+            <img src=""> 
         </a>
         <h1 id="app-title">News Flash</h1>
         <button id="navbar-toggle">
@@ -39,14 +23,11 @@
             <div></div>
             <div></div>
         </button>
-    </div> -->
+    </div>
     <nav>
-        <ul id="book-links">
-            <li>
-                <a href="/">Book List</a>
-            </li>
-            <li class="not-admin">
-                <a href="/new">Create Book</a>
+        <ul id="nav-links">
+            <li class="main-link">
+                <a href="/preferences">Preferences</a>
             </li>
             <li id="login-link">
                 <a href="/login">Login</a>
@@ -55,20 +36,32 @@
     </nav>
 
 
-    <section id="news-list-page" class="page" >
-        <h1>List of All News Articles</h1>
-        <div id="news-list-slot">place-holder</div>
-    </section>
+    <div id="anchor"></div>
+    <script id="feedView-template" type="text/x-handlebars-template">
+        <div class="feed-wrapper">
+            {{#articles}}
+                <div>
+                    <div class="source-author clearfix">
+                        <h2 class="article-author">{{author}}</h2>
+                    </div>
+
+                    <div class="feed-image">
+                        <img id="articleImage" src="{{urlToImage}}" onclick="location.href='{{url}}'">
+                    </div>
+                    <br><b><label>{{title}}</label></b></br>
+                    <br><label>{{description}}</label></br>
+                    <br><b><label>{{publishedAt}}</label></b></br>
+                </div>
+            {{/articles}}
+        </div>
+    </script>
+
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
-    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
-    <script src="scripts/models/article.js"></script>
-    <script src="scripts/views/login-view.js"></script>
-    <script src="scripts/views/main-view.js"></script>
-    <script src="scripts/views/source-view.js"></script>
+    <script src="server.js"></script>
     <script src="scripts/app.js"></script>
-    <script src="scripts/controller/routes.js"></script>
 </body>
 
 </html>
