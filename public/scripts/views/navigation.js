@@ -9,10 +9,10 @@ var span = document.getElementsByClassName('close')[0];
 
 var loginBtn = document.getElementById('loginBtn');
 
-$(document).ready(function () {
-  $('#navbar-toggle').on('click', function () {
-    $('#nav-links').slideToggle();
-  });
+$(document).ready(function() {
+    $('#navbar-toggle').on('click', function() {
+        $("#panel").stop().slideToggle();
+    });
 });
 
 // When the user clicks on the Login button, call the server and close the modal upon success (TODO: add failure logic)

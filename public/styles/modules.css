@@ -1,29 +1,28 @@
-/* Navigation bar */
-#article-nav {
-    background-color: #484848;
+h1 {
+    padding-left: 1em;
+    float: left;
+    margin: 0;
+}
+
+.feed-wrapper .feed-image {
+    text-align: center;
+}
+.feed-wrapper img {
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 500px;
+}
+.feed-wrapper .article-author {
     padding: 1em;
+    background-color: #4a4a4a;
+    color: #939393;
+}
+label {
+    display: -webkit-box;
+    padding-left: 1em;
+    margin: 0;
 }
 
-#navbar-toggle {
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
-    float: right;
-    margin-top: 0.5em;
-}
-
-#navbar-toggle:focus {
-    outline: none;
-}
-
-#navbar-toggle div {
-    width: 3.5em;
-    height: .5em;
-    background-color: #bfbfbf;
-    margin: .6em 0;
-    border: 1px solid transparent;
-    border-radius: .02em;
-}
 
 /* The Modal (background) */
 .modal {
@@ -160,3 +159,4 @@ label {
         margin: 0 auto;
     }
  }
+
