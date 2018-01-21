@@ -1,6 +1,11 @@
 * {
     font-family: 'Roboto Condensed', sans-serif;
 }
+
+body {
+    background-color: #f4f4f6;
+}
+
 .clearfix:after {
     content: "";
     display: table;
@@ -16,7 +21,8 @@
 }
 #nav-links li {
     list-style: none;
-    padding: 1.5em 0;
+    padding: 1em;
+    font-size: small;
 }
 #nav-links li a {
     color: #f0f0f0;
@@ -26,11 +32,17 @@
     padding-right: .7em;
 }
 #nav-links li:hover {
-    background-color: #4a4a4a;
+    background-color: #bfbfbf;
+}
+
+#nav-links li:hover > a {
+    color: black;
 }
 
 /* Main Nav Title */
 #app-title {
-    color: #939393;
+    color: #5aabfc;
     float: left;
+    margin: .3em;
+    font-size: 2.5em;
 }

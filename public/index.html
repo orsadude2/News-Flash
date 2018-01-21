@@ -11,7 +11,7 @@
     <title>News Flash</title>
 
     <script id="feedView-template" type="text/x-handlebars-template">
-        <div class="feed-wrapper">
+        <div class="feed-wrapper" id="{{id}}">
             <div id="inner">
                 <div class="source-author clearfix">
                     <h2 class="article-author">{{author}}</h2>
@@ -21,9 +21,9 @@
                     <img id="articleImage" src="{{urlToImage}}" onclick="location.href='{{url}}'">
                 </div>
 
-                <br><b><label>{{title}}</label></b></br>
-                <br><label>{{description}}</label></br>
-                <br><b><label>{{publishedAt}}</label></b></br>
+                <label id="title">{{title}}</label></br>
+                <label id="description">{{description}}</label></br>
+                <label id="publishedOn">{{publishedAt}}</label>
             </div>
         </div>
     </script>

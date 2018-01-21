@@ -1,32 +1,3 @@
-h1 {
-    padding-left: 1em;
-    float: left;
-    margin: 0;
-}
-
-.feed-wrapper {
-    /* border-radius: .5em; */
-    background-color: #808080;
-    margin-bottom: .5em;
-}
-.feed-wrapper .feed-image {
-    text-align: center;
-}
-.feed-wrapper img {
-    margin: 0 auto;
-    width: 100%;
-}
-.feed-wrapper .article-author {
-    padding: 1em;
-    background-color: #4a4a4a;
-    color: #939393;
-}
-label {
-    display: -webkit-box;
-    padding-left: 1em;
-    margin: 0;
-}
-
 /* Navigation bar */
 #article-nav {
     background-color: #484848;
@@ -38,7 +9,7 @@ label {
     border: 0;
     cursor: pointer;
     float: right;
-    margin-top: 0.8em;
+    margin-top: 0.5em;
 }
 
 #navbar-toggle:focus {
@@ -53,8 +24,6 @@ label {
     border: 1px solid transparent;
     border-radius: .02em;
 }
-
-
 
 /* The Modal (background) */
 .modal {
@@ -76,7 +45,7 @@ label {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid #808080;
     width: 80%;
 }
 
@@ -103,7 +72,91 @@ input {
 }
 
 #loginBtn {
-	height: 30px;
+    height: 30px;
     width: 25%;
 }
 
+/*  News Feed  */
+.feed-wrapper .feed-image {
+    text-align: center;
+}
+.feed-wrapper img {
+    margin: 0 auto;
+    max-height: 500px;
+    width: 100%;
+}
+.feed-wrapper .article-author {
+    margin-top: .3em;
+    padding-top: .8em;
+    padding-left: .5em;
+    color: #5aabfc;
+}
+
+.article-author {
+    font-size: 2em;
+}
+
+label {
+    display: -webkit-box;
+    padding: 0 1em;
+    color: white;
+    margin: 0;
+}
+
+#inner {
+    margin: .5em 0;
+    background-color:
+}
+
+/*  Articles  */
+#title {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-top: .3em;
+    margin-left: 0;
+}
+
+#description {
+    padding-top: .7em;
+    padding-left: 1.6em;
+    font-size: 1em;
+}
+
+#publishedOn {
+    padding-left: 1.9em;
+    padding-bottom: .8em;
+    font-size: .8em;
+}
+
+.article-author-noshow {
+    margin-top: 1em;
+    display: none;
+}
+
+/* Mixed Media */
+@media only screen and (max-width: 600px) {
+    .feed-wrapper {
+        background-color: rgba(128, 128, 128, .8);
+        margin-bottom: .5em;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+ }
+ 
+ @media only screen and (min-width: 600px) {
+    .feed-wrapper {
+        background-color: rgba(128, 128, 128, .8);
+        margin-bottom: .5em;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+ }
+ 
+ @media only screen and (min-width: 900px) {
+    .feed-wrapper {
+        background-color: rgba(128, 128, 128, .8);
+        margin-bottom: .5em;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+ }
