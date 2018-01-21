@@ -22,11 +22,15 @@ page('/*', (ctx, next) => {
 //   });
   
   page('/login', () => {
-    app.adminView.init();
+    app.loginView.init();
   });
 
-  page('/sign-up', () => {
-    app.adminView.init();
+  page('/signup', () => {
+    event.preventDefault();
+    app.signUpView.init();
+    $('#signUp').fadeIn(700);
+    $('.feed-wrapper').fadeOut(700);
+    localStorage.clear();
   });
 
   // page('/sources', () => {
