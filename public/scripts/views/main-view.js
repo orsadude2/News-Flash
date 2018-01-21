@@ -8,7 +8,7 @@ var app = app || {};
 
   newsListPage.init = () => {
     app.Article.fetchAllArticles().then(() => {
-        renderArticles()
+      renderArticles()
     })
   }
 

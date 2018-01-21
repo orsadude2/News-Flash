@@ -50,6 +50,12 @@
             <li id="login-link">
                 <a href="/login">Login</a>
             </li>
+            <li id="signup-link">
+                <a href="/signup">SignUp</a>
+            </li>
+            <li id="logout-link">
+                <a href="/logout">Log Out</a>
+            </li>
         </ul>
     </nav>
 
@@ -57,15 +63,27 @@
     <div id="anchor"></div>
 
 
+    <!--Sign Up Form-->
+    <form id="signUpForm">
+        <div id="signUp" class="modalj">
+            <div class="login-modal-content">
+                <span class="close">&times;</span>
+                <input id="email" type="text" name="email" placeholder="email"><br>
+                <input id="password" type="password" name="password" placeholder="password"><br>
+                <button id="signUpBtn">SignUp</button>
+            </div>
+        </div>
+    </form>
+
     <!-- The Login Modal -->
-    <div id="myModal" class="modal">
+    <form id="myModal" class="modal">
         <div class="login-modal-content">
             <span class="close">&times;</span>
-            <input id="email" type="text" name="email" placeholder="email"><br>
-            <input id="password" type="password" name="password" placeholder="password"><br>
+            <input id="email2" type="text" name="email" placeholder="email"><br>
+            <input id="password2" type="password" name="password" placeholder="password"><br>
             <button id="loginBtn">Login</button>
         </div>
-    </div>
+    </form>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -73,6 +91,7 @@
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="scripts/views/navigation.js"></script>
     <script src="scripts/models/article.js"></script>
+    <script src="scripts/views/signup-view.js"></script>
     <script src="scripts/views/login-view.js"></script>
     <script src="scripts/views/main-view.js"></script>
     <script src="scripts/views/source-view.js"></script>
