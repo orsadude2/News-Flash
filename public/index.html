@@ -11,7 +11,7 @@
     <title>News Flash</title>
 
     <script id="feedView-template" type="text/x-handlebars-template">
-        <div class="feed-wrapper">
+        <div class="feed-wrapper" id="{{id}}">
             <div id="inner">
                 <div class="source-author clearfix">
                     <h2 class="article-author">{{author}}</h2>
@@ -21,51 +21,60 @@
                     <img id="articleImage" src="{{urlToImage}}" onclick="location.href='{{url}}'">
                 </div>
 
-                <br><b><label>{{title}}</label></b></br>
-                <br><label>{{description}}</label></br>
-                <br><b><label>{{publishedAt}}</label></b></br>
+                <label id="title">{{title}}</label></br>
+                <label id="description">{{description}}</label></br>
+                <label id="publishedOn">{{publishedAt}}</label>
             </div>
         </div>
     </script>
 </head>
 
 <body>
-    <div id="article-nav" class="clearfix">
-        <a class="logo" href="/">
-            <!-- TODO: replace with our own image -->
-            <img src=""> 
-        </a>
+    <div class="fixed">
         <h1 id="app-title">News Flash</h1>
-        <button id="navbar-toggle">
-            <div></div>
-            <div></div>
-            <div></div>
-        </button>
+        <div id="ovi">
+            <button id="navbar-toggle">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+        </div>
+            <div id="panel">
+            <ul class="nav-links">
+                <li id="main-link"><a href="/preferences">Preferences</a></li>
+                <li id="login-link"><a href="/login">Login</a></li>
+                <li id="signup-link"><a href="/signup">SignUp</a></li>
+                <li id="logout-link"><a href="/logout">Log Out</a></li>
+            </ul>
+        </div>
     </div>
-    <nav>
-        <ul id="nav-links">
-            <li class="main-link">
-                <a href="/preferences">Preferences</a>
-            </li>
-            <li id="login-link">
-                <a href="/login">Login</a>
-            </li>
-        </ul>
-    </nav>
+
 
     <!-- Feed list -->
     <div id="anchor"></div>
 
 
+    <!--Sign Up Form-->
+    <form id="signUpForm">
+        <div id="signUp" class="modalj">
+            <div class="login-modal-content">
+                <span class="close">&times;</span>
+                <input id="email" type="text" name="email" placeholder="email"><br>
+                <input id="password" type="password" name="password" placeholder="password"><br>
+                <button id="signUpBtn">SignUp</button>
+            </div>
+        </div>
+    </form>
+
     <!-- The Login Modal -->
-    <div id="myModal" class="modal">
+    <form id="myModal" class="modal">
         <div class="login-modal-content">
             <span class="close">&times;</span>
-            <input id="email" type="text" name="email" placeholder="email"><br>
-            <input id="password" type="password" name="password" placeholder="password"><br>
+            <input id="email2" type="text" name="email" placeholder="email"><br>
+            <input id="password2" type="password" name="password" placeholder="password"><br>
             <button id="loginBtn">Login</button>
         </div>
-    </div>
+    </form>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -73,10 +82,12 @@
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="scripts/views/navigation.js"></script>
     <script src="scripts/models/article.js"></script>
+    <script src="scripts/views/signup-view.js"></script>
     <script src="scripts/views/login-view.js"></script>
     <script src="scripts/views/main-view.js"></script>
     <script src="scripts/views/source-view.js"></script>
     <script src="scripts/controller/routes.js"></script>
+
 </body>
 
 </html>
