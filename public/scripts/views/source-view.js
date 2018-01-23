@@ -1,6 +1,7 @@
 'use strict';
 
 var app = app || {};
+
 (module => {
 
   const preferenceView = {};

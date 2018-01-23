@@ -19,7 +19,7 @@ page('/', app.newsListPage.init);
 // app.Book.fetchOne(ctx.params.id).then(book => {
 //   app.bookDetailPage.init(book);
 // });
-//   });
+//   });  
 
 page('/login', () => {
   app.loginView.init();
