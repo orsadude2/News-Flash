@@ -1,3 +1,21 @@
+
+/* .image-description {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(29, 106, 154, 0.72);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+};
+
+#articleImage:hover .image-description{
+    visibility: visible;
+    opacity: 1;
+}; */
+
 h1 {
     padding-left: 1em;
     float: left;
@@ -110,7 +128,7 @@ label {
 
 #inner {
     margin: .5em 0;
-    background-color:
+    /* background-color: */
 }
 
 /*  Articles  */

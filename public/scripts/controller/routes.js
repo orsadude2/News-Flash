@@ -2,45 +2,47 @@
 
 
 page('/*', (ctx, next) => {
-    $('.page').hide();
-    next();
-  });
+  $('.page').hide();
+  next();
+});
 
-  page('/', app.newsListPage.init);
-  // page('/', () => {
-  //   app.Book.fetchAll().then(books => {
-  //     app.bookListPage.init(books);
-  //   })
-  // })
-  
+page('/', app.newsListPage.init);
+// page('/', () => {
+//   app.Book.fetchAll().then(books => {
+//     app.bookListPage.init(books);
+//   })
+// })
+
 //   page('/books/:id', (ctx) => {
 //     $('.page').hide()
-  
-    // app.Book.fetchOne(ctx.params.id).then(book => {
-    //   app.bookDetailPage.init(book);
-    // });
-//   });
-  
-  page('/login', () => {
-    app.loginView.init();
-  });
 
-  page('/signup', () => {
-    event.preventDefault();
-    app.signUpView.init();
-    $('#signUp').fadeIn(700);
-    $('.feed-wrapper').fadeOut(700);
-    localStorage.clear();
-  });
+// app.Book.fetchOne(ctx.params.id).then(book => {
+//   app.bookDetailPage.init(book);
+// });
+//   });  
 
-  page('/preferences', () => {
-    app.preferenceView.init();
-  });
+page('/login', () => {
+  app.loginView.init();
+});
 
-  page('/error', () => {
-    $('.page').hide();
-    $('#error-page').show();
-  });
-  
+page('/signup', () => {
+  event.preventDefault();
+  app.signUpView.init();
+  $('#signUp').fadeIn(700);
+  $('.feed-wrapper').fadeOut(700);
+  localStorage.clear();
+});
 
-  page.start();
+page('/preferences', () => {
+  event.preventDefault();
+  app.preferenceView.init();
+  $('.feed-wrapper, #signUp').fadeOut(700);
+});
+
+page('/error', () => {
+  $('.page').hide();
+  $('#error-page').show();
+});
+
+
+page.start();

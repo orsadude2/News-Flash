@@ -19,11 +19,12 @@
 
                 <div class="feed-image">
                     <img id="articleImage" src="{{urlToImage}}" onclick="location.href='{{url}}'">
+                    <!-- <div class="image-description">test text on hover of image to prompt user to click for image website</div> -->
                 </div>
 
                 <label id="title">{{title}}</label></br>
                 <label id="description">{{description}}</label></br>
-                <label id="publishedOn">{{publishedAt}}</label>
+                <label id="publishedOn">Published {{publishedAt}}</label>
             </div>
         </div>
     </script>
@@ -83,6 +84,7 @@
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="scripts/views/navigation.js"></script>
     <script src="scripts/models/article.js"></script>
+    <script src="scripts/models/sources.js"></script>
     <script src="scripts/views/signup-view.js"></script>
     <script src="scripts/views/login-view.js"></script>
     <script src="scripts/views/main-view.js"></script>
