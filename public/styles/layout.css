@@ -1,24 +1,15 @@
-
 #panel {
-    padding:5px;
-    text-align:center;
     background-color: #bfbfbf;
     border:solid 1px #c3c3c3;
     width: 100%;
-    padding: 20px;
-    display: none;
     overflow:hidden;
   }
   
   #navbar-toggle {
-      cursor: pointer;
-      float: right;
-  }
-  
-  #ovi {
-    display: block;
-    background-color: red;
-    width: 100%;
+    background-color: #484848;
+    margin: 1em;
+    cursor: pointer;
+    float: right;
   }
   
   #navbar-toggle div {
@@ -32,7 +23,7 @@
       
   .fixed {
       background-color: #484848;
-      padding: 1em;
+      padding-bottom: 0;
       position: fixed;
       top: 0;
       right: 0;
