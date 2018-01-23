@@ -33,9 +33,9 @@ page('/*', (ctx, next) => {
     localStorage.clear();
   });
 
-  // page('/sources', () => {
-  //   app.View.init();
-  // });
+  page('/preferences', () => {
+    app.preferenceView.init();
+  });
 
   page('/error', () => {
     $('.page').hide();

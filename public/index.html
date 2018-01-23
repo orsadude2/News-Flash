@@ -32,39 +32,26 @@
 <body>
     <div class="fixed">
         <h1 id="app-title">News Flash</h1>
-        <div id="ovi">
-            <button id="navbar-toggle">
+            <div id="navbar-toggle">
                 <div></div>
                 <div></div>
                 <div></div>
-            </button>
-        </div>
+            </div>
             <div id="panel">
             <ul class="nav-links">
-                <li id="main-link"><a href="/preferences">Preferences</a></li>
+                <li id="home-link"><a href="/home">Home</a></li>
                 <li id="login-link"><a href="/login">Login</a></li>
-                <li id="signup-link"><a href="/signup">SignUp</a></li>
-                <li id="logout-link"><a href="/logout">Log Out</a></li>
+                <li id="logout-link"><a href="/logout">Log-Out</a></li>
+                <li id="signup-link"><a href="/signup">Sign-Up</a></li>
+                <li id="main-link"><a href="/preferences">Preferences</a></li>
             </ul>
         </div>
     </div>
 
 
-    <!-- Feed list -->
+    <!-- Home Page -->
     <div id="anchor"></div>
 
-
-    <!--Sign Up Form-->
-    <form id="signUpForm">
-        <div id="signUp" class="modalj">
-            <div class="login-modal-content">
-                <span class="close">&times;</span>
-                <input id="email" type="text" name="email" placeholder="email"><br>
-                <input id="password" type="password" name="password" placeholder="password"><br>
-                <button id="signUpBtn">SignUp</button>
-            </div>
-        </div>
-    </form>
 
     <!-- The Login Modal -->
     <form id="myModal" class="modal">
@@ -75,6 +62,20 @@
             <button id="loginBtn">Login</button>
         </div>
     </form>
+
+    <!--Sign Up Page-->
+    <form id="signUpForm">
+        <div id="signUp" class="modalj">
+            <div class="login-modal-content">
+                <input id="email" type="text" name="email" placeholder="email"><br>
+                <input id="password" type="password" name="password" placeholder="password"><br>
+                <button id="signUpBtn">SignUp</button>
+            </div>
+        </div>
+    </form>
+
+   <!-- Preferences Page -->
+   <div id="pref-page"></div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
