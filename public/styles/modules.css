@@ -1,3 +1,21 @@
+
+/* .image-description {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(29, 106, 154, 0.72);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+};
+
+#articleImage:hover .image-description{
+    visibility: visible;
+    opacity: 1;
+}; */
+
 h1 {
     padding-left: 1em;
     float: left;
@@ -13,16 +31,28 @@ h1 {
     max-height: 500px;
 }
 .feed-wrapper .article-author {
-    padding: 1em;
     background-color: #4a4a4a;
-    color: #939393;
+    margin-bottom: 0;
+    margin-top: .3em;
+    padding: 1em .5em;
+    color: #5aabfc;
 }
+
 label {
     display: -webkit-box;
     padding-left: 1em;
     margin: 0;
 }
 
+/* Sign-Up page */
+#signUp {
+    background-color: white;
+    border: 1px solid black;
+    width: 80%;
+    height: 40%;
+    margin: 22em auto;
+    padding: 2em;
+}
 
 /* The Modal (background) */
 .modal {
@@ -43,7 +73,7 @@ label {
 .login-modal-content {
     background-color: #fefefe;
     margin: auto;
-    padding: 20px;
+    padding: 2em;
     border: 1px solid #808080;
     width: 80%;
 }
@@ -84,12 +114,6 @@ input {
     max-height: 500px;
     width: 100%;
 }
-.feed-wrapper .article-author {
-    margin-top: .3em;
-    padding-top: .8em;
-    padding-left: .5em;
-    color: #5aabfc;
-}
 
 .article-author {
     font-size: 2em;
@@ -104,7 +128,7 @@ label {
 
 #inner {
     margin: .5em 0;
-    background-color:
+    /* background-color: */
 }
 
 /*  Articles  */

@@ -19,11 +19,12 @@
 
                 <div class="feed-image">
                     <img id="articleImage" src="{{urlToImage}}" onclick="location.href='{{url}}'">
+                    <!-- <div class="image-description">test text on hover of image to prompt user to click for image website</div> -->
                 </div>
 
                 <label id="title">{{title}}</label></br>
                 <label id="description">{{description}}</label></br>
-                <label id="publishedOn">{{publishedAt}}</label>
+                <label id="publishedOn">Published {{publishedAt}}</label>
             </div>
         </div>
     </script>
@@ -32,39 +33,26 @@
 <body>
     <div class="fixed">
         <h1 id="app-title">News Flash</h1>
-        <div id="ovi">
-            <button id="navbar-toggle">
+            <div id="navbar-toggle">
                 <div></div>
                 <div></div>
                 <div></div>
-            </button>
-        </div>
+            </div>
             <div id="panel">
             <ul class="nav-links">
-                <li id="main-link"><a href="/preferences">Preferences</a></li>
+                <li id="home-link"><a href="/home">Home</a></li>
                 <li id="login-link"><a href="/login">Login</a></li>
-                <li id="signup-link"><a href="/signup">SignUp</a></li>
-                <li id="logout-link"><a href="/logout">Log Out</a></li>
+                <li id="logout-link"><a href="/logout">Log-Out</a></li>
+                <li id="signup-link"><a href="/signup">Sign-Up</a></li>
+                <li id="main-link"><a href="/preferences">Preferences</a></li>
             </ul>
         </div>
     </div>
 
 
-    <!-- Feed list -->
+    <!-- Home Page -->
     <div id="anchor"></div>
 
-
-    <!--Sign Up Form-->
-    <form id="signUpForm">
-        <div id="signUp" class="modalj">
-            <div class="login-modal-content">
-                <span class="close">&times;</span>
-                <input id="email" type="text" name="email" placeholder="email"><br>
-                <input id="password" type="password" name="password" placeholder="password"><br>
-                <button id="signUpBtn">SignUp</button>
-            </div>
-        </div>
-    </form>
 
     <!-- The Login Modal -->
     <form id="myModal" class="modal">
@@ -76,12 +64,27 @@
         </div>
     </form>
 
+    <!--Sign Up Page-->
+    <form id="signUpForm">
+        <div id="signUp" class="modalj">
+            <div class="login-modal-content">
+                <input id="email" type="text" name="email" placeholder="email"><br>
+                <input id="password" type="password" name="password" placeholder="password"><br>
+                <button id="signUpBtn">SignUp</button>
+            </div>
+        </div>
+    </form>
+
+   <!-- Preferences Page -->
+   <div id="pref-page"></div>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="scripts/views/navigation.js"></script>
     <script src="scripts/models/article.js"></script>
+    <script src="scripts/models/sources.js"></script>
     <script src="scripts/views/signup-view.js"></script>
     <script src="scripts/views/login-view.js"></script>
     <script src="scripts/views/main-view.js"></script>

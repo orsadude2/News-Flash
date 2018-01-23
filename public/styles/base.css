@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: #f4f4f6;
+    background-color: #e0e0e3;
 }
 
 .clearfix:after {
@@ -11,16 +11,21 @@ body {
     display: table;
     clear: both;
 }
+
 /* Navigation Menu */
 .nav-links {
+    background-color:  #bfbfbf;
     padding: 0;
     text-align: right;
+    margin: 0;
 }
+
 .nav-links li {
     list-style: none;
     padding: 1em;
     font-size: small;
 }
+
 .nav-links li a {
     color: #f0f0f0;
     text-decoration: none;
@@ -30,7 +35,7 @@ body {
 }
 
 .nav-links li:hover {
-    background-color: #aca9a9;
+    background-color: #939393;
 }
 
 .nav-links li:hover > a {
@@ -39,8 +44,12 @@ body {
 
 /* Main Nav Title */
 #app-title {
-    color: #5aabfc;
-    float: left;
-    margin: .3em;
     font-size: 2.5em;
+    color: #5aabfc;
+    padding: .6em;
+    float: left;
+}
+
+#anchor {
+    margin-top: 7em;
 }

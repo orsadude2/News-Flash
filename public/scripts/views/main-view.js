@@ -17,7 +17,7 @@ var app = app || {};
     $('#feedView-template').empty()
     app.Article.all.forEach((articleData, i) => {
       articleData.id = i;
-      console.log(i);
+      // console.log(i);
       let articleTemplate = template(articleData);
       $('#anchor').append(articleTemplate);
       if(articleData.author === null) {
