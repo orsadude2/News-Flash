@@ -41,4 +41,4 @@ var app = app || {};
   };
 
   module.signUpView = signUpView;
-})(app)
+})(app);
