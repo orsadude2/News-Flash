@@ -4,13 +4,14 @@ var app = app || {};
 
 (module => {
 
-  const API_URL = '/sources';
+  const API_URL = '/articles';
   const Article = {};
   Article.all = [];
 
   Article.fetchAllArticles = () => {
     return $.getJSON(API_URL).then(articleData => {
-      Article.all = articleData
+      Article.all = articleData;
+      // console.log(Article.all);
     }).catch(error => console.error(error));
   }
 
