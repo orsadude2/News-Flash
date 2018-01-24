@@ -6,7 +6,14 @@ page('/*', (ctx, next) => {
   next();
 });
 
-page('/', app.newsListPage.init);
+page('/', () => { 
+  page('/home');
+});
+
+page('/home', () => { 
+  app.newsListPage.init();
+});
+
 // page('/', () => {
 //   app.Book.fetchAll().then(books => {
 //     app.bookListPage.init(books);
