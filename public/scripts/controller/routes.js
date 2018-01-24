@@ -29,14 +29,15 @@ page('/home', () => {
 //   });  
 
 page('/login', () => {
+  event.preventDefault();
   app.loginView.init();
 });
 
 page('/signup', () => {
   event.preventDefault();
   app.signUpView.init();
-  $('#signUp').fadeIn(700);
-  $('.feed-wrapper').fadeOut(700);
+  $('#signUp').fadeIn();
+  $('.feed-wrapper').fadeOut();
   localStorage.clear();
 });
 
@@ -50,6 +51,5 @@ page('/error', () => {
   $('.page').hide();
   $('#error-page').show();
 });
-
 
 page.start();

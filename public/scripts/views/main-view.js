@@ -13,6 +13,7 @@ var app = app || {};
   }
 
   function renderArticles() {
+    $('#home-link, #pref-link').hide()
     $('#feedView-template').show()
     $('#feedView-template').empty()
     app.Article.all.forEach((articleData, i) => {
@@ -24,7 +25,6 @@ var app = app || {};
         // console.log("thing is null", articleTemplate);
         $(`.feed-wrapper[id='${i}'] > div > div > h2`).addClass('article-author-noshow');
       }
-
     })
   }
 
