@@ -17,9 +17,9 @@ var app = app || {};
         (document.getElementById('password2').value === userPassword)) {
         console.log('Login Success') 
         $('#login-link, #signup-link').hide();
-        $('#logout-link, .main-link').show();
+        $('#logout-link, #home-link, #pref-link').show();
       } else {
-        alert('Entered username or password is incorrect.')
+        alert('Username or password is incorrect.')
       }
     });
 
