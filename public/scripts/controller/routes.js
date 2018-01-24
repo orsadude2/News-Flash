@@ -1,25 +1,17 @@
 'use strict';
 
-
 page('/*', (ctx, next) => {
   $('.page').hide();
   next();
 });
 
-page('/', app.newsListPage.init);
-// page('/', () => {
-//   app.Book.fetchAll().then(books => {
-//     app.bookListPage.init(books);
-//   })
-// })
+page('/', () => { 
+  page('/home');
+});
 
-//   page('/books/:id', (ctx) => {
-//     $('.page').hide()
-
-// app.Book.fetchOne(ctx.params.id).then(book => {
-//   app.bookDetailPage.init(book);
-// });
-//   });  
+page('/home', () => { 
+  app.newsListPage.init();
+});
 
 page('/login', () => {
   app.loginView.init();
