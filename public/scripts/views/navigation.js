@@ -18,21 +18,18 @@ var loginBtn = document.getElementById("loginBtn");
 //   app.signUpView.init();
 // });
 
-
-
 $(document).ready(function() {
     $('#navbar-toggle').on('click', function() {
-        $("#panel").stop().slideToggle();
+        $("#panel").slideToggle();
     });
 });
 
 
 //when user presses LOG OUT
-$('#logout-link, .main-link').hide();
 $('#logout-link').on('click', (event) => {
   event.preventDefault();
   localStorage.clear();
-  $('.main-link, #logout-link').hide();
+  $('.pref-link, #logout-link').hide();
   $('#login-link, #signup-link').show();
 });
 
