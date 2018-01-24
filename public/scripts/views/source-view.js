@@ -10,6 +10,9 @@ var app = app || {};
   const selectedList = [];
 
   preferenceView.init = () => {
+    $('#home-link, #logout-link').show();
+    $('#signup-link, #login-link, #pref-link').hide();
+
     app.Source.fetchAllSources().then(() => {
       // console.log('preferences works', app.Source.all);
       app.Source.all.forEach((source) => {

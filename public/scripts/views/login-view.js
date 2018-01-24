@@ -21,9 +21,9 @@ var modal = document.getElementById('login-modal');
         (document.getElementById('login-password').value === userPassword)) {
         console.log('Login Success') 
         $('#login-link, #signup-link').hide();
-        $('#logout-link, #pref-link').show();
+        $('#logout-link, #home-link, #pref-link').show();
       } else {
-        alert('Entered username or password is incorrect.')
+        alert('Username or password is incorrect.')
       }
     });
   };
