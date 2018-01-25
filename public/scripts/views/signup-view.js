@@ -4,7 +4,7 @@ var app = app || {};
 (module => {
 
   const signUpView = {};
-  
+
   $('.modalj').hide();
   
   signUpView.init = () => {
@@ -31,6 +31,7 @@ var app = app || {};
       let userPassword = document.getElementById('signup-password').value
       console.log(userEmail);
       console.log(userPassword);
+
       if (userEmail && userPassword !== "") {
         localStorage.setItem('EMAIL-KEY', JSON.stringify(userEmail));
         localStorage.setItem('PASSWORD-KEY', JSON.stringify(userPassword));

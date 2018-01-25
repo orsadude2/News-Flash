@@ -15,8 +15,6 @@ var modal = document.getElementById('login-modal');
       event.preventDefault();
       let userEmail = JSON.parse(localStorage.getItem('EMAIL-KEY'));
       let userPassword = JSON.parse(localStorage.getItem('PASSWORD-KEY'));
-      console.log(userEmail);
-      console.log(userPassword);
       if ((document.getElementById('login-email').value === userEmail) && 
         (document.getElementById('login-password').value === userPassword)) {
         console.log('Login Success') 
