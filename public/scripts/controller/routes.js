@@ -7,6 +7,7 @@ page('/*', (ctx, next) => {
 
 page('/', () => { 
   page('/home');
+  $('.save-button').hide();
 });
 
 page('/home', () => { 
@@ -30,6 +31,7 @@ page('/preferences', () => {
   event.preventDefault();
   app.preferenceView.init();
   $('.feed-wrapper, #signUp').fadeOut(700);
+  $('.save-button').show();
 });
 
 page('/error', () => {
