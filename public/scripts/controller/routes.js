@@ -21,15 +21,15 @@ page('/login', () => {
 page('/signup', () => {
   event.preventDefault();
   app.signUpView.init();
-  $('#signUp').fadeIn();
-  $('.feed-wrapper').fadeOut();
+  $('#signUp').show();
+  $('.feed-wrapper').hide();
   localStorage.clear();
 });
 
 page('/preferences', () => {
   event.preventDefault();
   app.preferenceView.init();
-  $('.feed-wrapper, #signUp').fadeOut(700);
+  $('.feed-wrapper, #signUp').hide();
 });
 
 page('/error', () => {
