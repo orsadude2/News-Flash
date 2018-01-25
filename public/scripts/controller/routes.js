@@ -7,6 +7,7 @@ page('/*', (ctx, next) => {
 
 page('/', () => { 
   page('/home');
+  $('.save-button').hide();
 });
 
 page('/home', () => { 
