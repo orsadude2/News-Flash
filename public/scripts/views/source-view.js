@@ -37,7 +37,7 @@ var app = app || {};
 
       console.log('we selected the following news outlets: ' + selectedList);
       $('.name-list, .save-button').fadeOut(500);
-      // $('#pref-page').append(selectedList)
+      page('/home');
     });
   };
 
