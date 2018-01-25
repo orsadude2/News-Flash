@@ -10,53 +10,90 @@
     <link rel="stylesheet" href="styles/layout.css">
     <title>News Flash</title>
 
-    <script id="article-template" type="text/x-handlebars-template">
-        <div class="article-wrapper">
-            <div class="article-image">
-                <img src="{{ image_url }}">
-            </div>
-            <div class="article-author clearfix">
-                <div class="article-title-wrapper clearfix">
-                    <h2 class="article-author">{{ title }}</h2>
-                    <div class="article-author">{{ author }}</div>
-                    <div>{{ description }}</div>
+    <script id="feedView-template" type="text/x-handlebars-template">
+        <div class="feed-wrapper" id="{{id}}">
+            <div id="inner">
+                <div class="source-author clearfix">
+                    <h2 class="article-author">{{author}}</h2>
                 </div>
-                <!-- <div class="description"><button type="button" id="view-details" data-id="{{ id }}">view details</button></div>    -->
+
+                <div class="feed-image">
+                    <img id="articleImage" src="{{urlToImage}}" onclick="location.href='{{url}}'">
+                    <!-- <div class="image-description">test text on hover of image to prompt user to click for image website</div> -->
+                </div>
+
+                <a id="title" href="{{url}}">{{title}}</a></br>
+                <label id="description">{{description}}</label></br>
+                <label id="publishedOn">Published {{publishedAt}} ago</label>
             </div>
         </div>
     </script>
-
 </head>
 
 <body>
-    <div id="book-nav" class="clearfix">
-        <a class="logo" href="/">
-            <img src="img/logo-codefellows.png">
-        </a>
+    <div class="fixed-navbar">
         <h1 id="app-title">News Flash</h1>
-        <button id="navbar-toggle">
-            <div></div>
-            <div></div>
-            <div></div>
-        </button>
+            <div id="navbar-toggle">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="panel">
+            <ul class="nav-links">
+                <li id="home-link" class="navbar-item"><a href="/home">Home</a></li>
+                <li id="login-link" class="navbar-item"><a href="/login">Login</a></li>
+                <li id="logout-link" class="navbar-item"><a href="/logout">Log Out</a></li>
+                <li id="signup-link" class="navbar-item"><a href="/signup">Sign Up</a></li>
+                <li id="pref-link" class="navbar-item"><a href="/preferences">Preferences</a></li>
+            </ul>
+        </div>
     </div>
-    <nav>
-        <ul id="book-links">
-            <li>
-                <a href="/">Book List</a>
-            </li>
-            <li class="not-admin">
-                <a href="/new">Create Book</a>
-            </li>
-            <li id="login-link">
-                <a href="/login">Login</a>
-            </li>
-        </ul>
-    </nav>
+
+
+    <!-- Home Feed Page -->
+    <div id="anchor"></div>
+
+
+    <!-- The Login Modal -->
+    <form id="login-modal" class="modal">
+        <div id="login-modal-outerArea">
+            <div id="login-modal-content">
+                <span class="close">&times;</span>
+                <input id="login-email" type="text" name="email" placeholder="email"><br>
+                <input id="login-password" type="password" name="password" placeholder="password"><br>
+                <button id="loginBtn">Login</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Sign Up Page -->
+    <form id="signup-modal">
+        <div id="signUp" class="modalj">
+            <input id="signup-email" type="text" name="email" placeholder="email"><br>
+            <input id="signup-password" type="password" name="password" placeholder="password"><br>
+            <button id="signUpBtn">SignUp</button>
+        </div>
+    </form>
+
+   <!-- Preferences Page -->
+   <div id="pref-page">
+       <ul name="ovi" class="name-list"></ul>
+       <input class="save-button" type="submit">
+   </div>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
-    <script src="server.js"></script>
-    <script src="scripts/app.js"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+    <script src="scripts/views/navigation.js"></script>
+    <script src="scripts/models/article.js"></script>
+    <script src="scripts/models/sources.js"></script>
+    <script src="scripts/views/signup-view.js"></script>
+    <script src="scripts/views/login-view.js"></script>
+    <script src="scripts/views/main-view.js"></script>
+    <script src="scripts/views/source-view.js"></script>
+    <script src="scripts/controller/routes.js"></script>
+
 </body>
 
 </html>
