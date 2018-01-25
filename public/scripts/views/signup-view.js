@@ -4,13 +4,12 @@ var app = app || {};
 (module => {
 
   const signUpView = {};
-  
+
   $('.modalj').hide();
   
   signUpView.init = () => {
     $('#home-link').show();
     $('#signup-link, #login-link, #pref-link').hide();
-    
     var loginList = localStorage.loginData;//starts as an empty array
     if (loginList === undefined || loginList === null) {
       loginList = [];
@@ -28,11 +27,11 @@ var app = app || {};
 
     $('#signUpBtn').on('click', (event) => {
       event.preventDefault();
-  
-      let userEmail = document.getElementById('email').value
-      let userPassword = document.getElementById('password').value
+      let userEmail = document.getElementById('signup-email').value
+      let userPassword = document.getElementById('signup-password').value
       console.log(userEmail);
       console.log(userPassword);
+
       if (userEmail && userPassword !== "") {
         localStorage.setItem('EMAIL-KEY', JSON.stringify(userEmail));
         localStorage.setItem('PASSWORD-KEY', JSON.stringify(userPassword));
